@@ -1,5 +1,5 @@
 # Kurdshell is created by me, Kurd
-# Inspired by Crunch, which was stolen from Dallas
+# Inspired by Crunch, which was inspired from Dallas
 #
 # What I thought would be a common pattern for most themes to follow ended up being rare, or not seen at all
 # Time, Machine, Path, Git Branch
