@@ -1,0 +1,17 @@
+This file contains packages nessecary for my dev environment, as well as other helpful installation tips
+
+zsh
+oh-my-zsh
+vscode
+    -Dracula
+    -Git Graph
+    -GitHub Pull Requests
+    -GitLens
+    -JSON Pretty Printer
+proton VPN
+    -Startup
+SHARED
+    -Mount on Startup
+    - "mount -f vfat /dev/sdb4 /media/akurtiak/SHARED"
+discord (lol)
+spotify

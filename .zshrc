@@ -112,3 +112,17 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 alias python="python3"
 
+
+
+#Start of Kurdshell ASCII Art
+echo " _   __              _ _____ _          _ _ " 
+echo "| | / /             | /  ___| |        | | |"
+echo "| |/ / _   _ _ __ __| \ \`--.| |__   ___| | |"
+echo "|    \| | | | '__/ _\` |\`--. \ '_ \ / _ \ | |"
+echo "| |\  \ |_| | | | (_| /\__/ / | | |  __/ | |"
+echo "\_| \_/\__,_|_|  \__,_\____/|_| |_|\___|_|_|"
+echo ""
+
+
+
+
