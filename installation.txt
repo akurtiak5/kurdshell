@@ -12,6 +12,10 @@ proton VPN
     -Startup
 SHARED
     -Mount on Startup
-    - "mount -f vfat /dev/sdb4 /media/akurtiak/SHARED"
+    - "mount -f vfat /dev/sdb4 /media/SHARED"
+    - /ect/fstab "/dev/sdb4 /media/SHARED  vfat defaults  0       2 "
 discord (lol)
 spotify
+GUI - 
+    -Japanese Keyboard
+    -OpenRazer Controller
