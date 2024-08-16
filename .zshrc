@@ -111,7 +111,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 alias python="python3"
-
+alias k="k -ah"
 
 
 #Start of Kurdshell ASCII Art
