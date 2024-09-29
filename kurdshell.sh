@@ -12,12 +12,12 @@ cd ~/git/kurdshell; sudo git pull
 
 # Configure git
 sudo git config --global user.name "akurtiak"
-sudo git config --global user.email "ack555@duck.com"   
+sudo git config --global user.email "ack555@duck.com"
 
 # Linux Setup
 sudo timedatectl set-local-rtc 1   #set time and date controls to not conflict with windows
-# Generate id_rsa (or equivilent identify file)
-# Install latest drivers
+sudo ssh-keygen -o # Generate id_rsa (or equivilent identify file)
+sudo ubuntu-drivers install # Install latest drivers
 
 #Setup zsh
 mkdir -p $HOME/bin
@@ -37,30 +37,51 @@ sudo source ~/.zshrc
 sudo source ~/.zprofile
 
 #Install Utilities
+cd $HOME
 sudo apt install liquidctl
 sudo cp ~/git/kurdshell/casectl ~/bin
 sudo chmod 755 ~/bin/casectl
 
 #Japanese Keyboard
+sudo apt install fcitx-mozc ibus-mozc mozc-data mozc-server mozc-utils-gui
+# install if characters not appearing correctly 'sudo apt install fonts-takao'
+
+#Proton VPN
+sudo wget https://repo.protonvpn.com/debian/dists/stable/main/binary-all/protonvpn-stable-release_1.0.4_all.deb
+sudo dpkg -i ./protonvpn-stable-release_1.0.4_all.deb && sudo apt update
+sudo apt install proton-vpn-gnome-desktop
+sudo apt install libayatana-appindicator3-1 gir1.2-ayatanaappindicator3-0.1 gnome-shell-extension-appindicator
 
 #Install Apps
-#Proton VPN
 #Spotify
+sudo snap install spotify
 #VSCode - need the extensions too
+sudo snap install code
+code --install-extension dracula-theme.theme-dracula
+code --install-extension eamodio.gitlens
+code --install-extension github.vscode-pull-request-github
+code --install-extension mhutchie.git-graph
+code --install-extension mohsen1.prettify-json
 #Steam
+sudo snap install steam
 #Discord
+sudo snap install discord
 
-#Firefox Setup
 
-#Startup Tasks
-#vpn
-#casectl
-#mount SHARED drive
+# Reboot when completed
+echo "All processes completed, please run 'sudo reboot'"
 
 #MANUAL STEPS
-# configure proton VPN
+# setup display and monitors
 # rename system to Saladin
 # set user password
-# firefox login and personal configuration
-# add LB profile to firefox
+# login and configure proton vpn
+# Firefox
+    # Login
+    # LB Profile
+    # DDG Safe
 # git ssh keys
+#Startup Tasks
+    #vpn "protonvpn-app"
+    #casectl "$HOME/bin/casectl"
+    #mount SHARED drive ""

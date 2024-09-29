@@ -1,0 +1,5 @@
+#!/bin/zsh
+
+sudo liquidctl --match kraken set ring color fixed 0x0000FF
+sudo liquidctl --match kraken set logo color fixed 0xFF00FF
+sudo liquidctl --match smart set sync color off
