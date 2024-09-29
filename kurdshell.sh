@@ -66,6 +66,8 @@ code --install-extension mohsen1.prettify-json
 sudo snap install steam
 #Discord
 sudo snap install discord
+#Telegram
+sudo snap install telegram-desktop
 
 
 # Reboot when completed
