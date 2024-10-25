@@ -77,6 +77,8 @@ echo "All processes completed, please run 'sudo reboot'"
 # setup display and monitors
 # rename system to Saladin
 # set user password
+# Install official 1password client
+    # Also add in op cli
 # login and configure proton vpn
 # Firefox
     # Login
