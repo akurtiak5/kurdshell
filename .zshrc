@@ -85,6 +85,13 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+export WORKON_HOME=~/.virtualenvs
+if test -f "/usr/share/virtualenvwrapper/virtualenvwrapper.sh"; then
+	source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+else
+	source virtualenvwrapper.sh
+fi
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -123,6 +130,13 @@ echo "| |\  \ |_| | | | (_| /\__/ / | | |  __/ | |"
 echo "\_| \_/\__,_|_|  \__,_\____/|_| |_|\___|_|_|"
 echo ""
 
+workoff(){
+	deactivate
+}
 
-
+casectl(){
+	liquidctl --match kraken set ring color fixed 0x0000FF
+	liquidctl --match kraken set logo color fixed 0xFF00FF
+	liquidctl --match smart set sync color off
+}
 

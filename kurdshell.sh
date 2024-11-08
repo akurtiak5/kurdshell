@@ -31,6 +31,9 @@ sudo git clone https://github.com/zsh-users/zsh-autosuggestions.git
 sudo git clone https://github.com/zsh-users/zsh-history-substring-search.git
 sudo git clone https://github.com/agkozak/zsh-z.git
 sudo git clone https://github.com/supercrabtree/k
+sudo apt install python3-pip
+sudo apt install python3-virtualenv
+sudo apt install python3-virtualenvwrapper
 sudo cp ~/git/kurdshell/.zshrc $HOME
 sudo cp ~/git/kurdshell/.zprofile $HOME
 sudo source ~/.zshrc
