@@ -8,37 +8,37 @@
 # Update kurdshell
 sudo apt update; sudo apt upgrade
 sudo apt install git
-cd ~/git/kurdshell; sudo git pull
+cd ~/git/kurdshell; git pull
 
 # Configure git
-sudo git config --global user.name "akurtiak"
-sudo git config --global user.email "ack555@duck.com"
+git config --global user.name "akurtiak"
+git config --global user.email "ack555@duck.com"
 
 # Linux Setup
 sudo timedatectl set-local-rtc 1   #set time and date controls to not conflict with windows
-sudo ssh-keygen -o # Generate id_rsa (or equivilent identify file)
+ssh-keygen -o # Generate id_rsa (or equivilent identify file)
 sudo ubuntu-drivers install # Install latest drivers
 
 #Setup zsh
 mkdir -p $HOME/bin
 cd $HOME
 sudo apt install zsh
-sudo chsh -s $(which zsh)
-sudo sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
-sudo cp ~/git/kurdshell/kurdshell.zsh-theme ~/.oh-my-zsh/themes
-sudo cd ~/.oh-my-zsh/plugins
-sudo git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
-sudo git clone https://github.com/zsh-users/zsh-autosuggestions.git
-sudo git clone https://github.com/zsh-users/zsh-history-substring-search.git
-sudo git clone https://github.com/agkozak/zsh-z.git
-sudo git clone https://github.com/supercrabtree/k
+chsh -s $(which zsh)
+sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+cp ~/git/kurdshell/kurdshell.zsh-theme ~/.oh-my-zsh/themes
+cd ~/.oh-my-zsh/plugins
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
+git clone https://github.com/zsh-users/zsh-autosuggestions.git
+git clone https://github.com/zsh-users/zsh-history-substring-search.git
+git clone https://github.com/agkozak/zsh-z.git
+git clone https://github.com/supercrabtree/k
 sudo apt install python3-pip
 sudo apt install python3-virtualenv
 sudo apt install python3-virtualenvwrapper
-sudo cp ~/git/kurdshell/.zshrc $HOME
-sudo cp ~/git/kurdshell/.zprofile $HOME
-sudo source ~/.zshrc
-sudo source ~/.zprofile
+cp ~/git/kurdshell/.zshrc $HOME
+cp ~/git/kurdshell/.zprofile $HOME
+source ~/.zshrc
+source ~/.zprofile
 
 #Install Utilities
 cd $HOME
