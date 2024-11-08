@@ -66,6 +66,7 @@ code --install-extension eamodio.gitlens
 code --install-extension github.vscode-pull-request-github
 code --install-extension mhutchie.git-graph
 code --install-extension mohsen1.prettify-json
+code --install-extension ms-vscode-remote.remote-ssh
 #Steam
 sudo snap install steam
 #Discord
