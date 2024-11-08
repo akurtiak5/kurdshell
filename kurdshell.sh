@@ -21,6 +21,7 @@ sudo ubuntu-drivers install # Install latest drivers
 
 #Setup zsh
 mkdir -p $HOME/bin
+cd $HOME
 sudo apt install zsh
 sudo chsh -s $(which zsh)
 sudo sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
