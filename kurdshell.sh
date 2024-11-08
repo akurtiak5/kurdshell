@@ -43,8 +43,8 @@ sudo source ~/.zprofile
 #Install Utilities
 cd $HOME
 sudo apt install liquidctl
-sudo cp ~/git/kurdshell/casectl ~/bin
-sudo chmod 755 ~/bin/casectl
+#sudo cp ~/git/kurdshell/casectl ~/bin
+#sudo chmod 755 ~/bin/casectl
 
 #Japanese Keyboard
 sudo apt install fcitx-mozc ibus-mozc mozc-data mozc-server mozc-utils-gui
