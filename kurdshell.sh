@@ -91,6 +91,17 @@ echo "All processes completed, please run 'sudo reboot'"
     # DDG Safe
 # git ssh keys
 #Startup Tasks
-    #vpn "protonvpn-app"
-    #casectl "$HOME/bin/casectl"
-    #mount SHARED drive ""
+    # protonvpn-app
+    # (zsh -c "source ~/.zshrc && casectl")
+
+# Mount SHARED Drive
+# sudo mkdir -p /media/SHARED
+
+# One time mount
+# sudo mount /dev/sdb4 /media/SHARED
+
+# Permanent Mount
+# sudo blkid
+# sudo vim /etc/fstab
+# UUID=B396-6EB7 /media/SHARED vfat defaults 0 2
+
