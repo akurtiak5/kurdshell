@@ -88,6 +88,7 @@ echo "All processes completed, please run 'sudo reboot'"
 # Firefox
     # Login
     # LB Profile
+    # UB Profile
     # DDG Safe
 # git ssh keys
 #Startup Tasks
