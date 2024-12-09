@@ -99,11 +99,12 @@ echo "All processes completed, please run 'sudo reboot'"
 # Mount SHARED Drive
 # sudo mkdir -p /media/SHARED
 
-# One time mount
-# sudo mount /dev/sdb4 /media/SHARED
-
 # Permanent Mount
 # sudo blkid
 # sudo vim /etc/fstab
-# UUID=B396-6EB7 /media/SHARED vfat defaults 0 2
+#EXAMPLE
+#/dev/disk/by-uuid/<UUID> /media/hyper auto nosuid,nodev,nofail,x-gvfs-show,uid=1000,gid=1000,umask=002 0 2
+#/dev/disk/by-uuid/<UUID> /media/project auto nosuid,nodev,nofail,x-gvfs-show,uid=1000,gid=1000,umask=002 0 2
+#/dev/disk/by-uuid/<UUID> /media/SHARE auto nosuid,nodev,nofail,x-gvfs-show,uid=1000,gid=1000,umask=002 0 2
+
 
