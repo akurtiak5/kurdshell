@@ -135,8 +135,8 @@ workoff(){
 }
 
 casectl(){
-	liquidctl --match kraken set ring color fixed 0x0000FF
-	liquidctl --match kraken set logo color fixed 0xFF00FF
+	liquidctl --match kraken set ring color fixed 0xFFFFFF
+	liquidctl --match kraken set logo color fixed 0x2060E0
 	liquidctl --match smart set sync color off
 }
 
