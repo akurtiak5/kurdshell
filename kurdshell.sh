@@ -35,6 +35,7 @@ git clone https://github.com/supercrabtree/k
 sudo apt install python3-pip
 sudo apt install python3-virtualenv
 sudo apt install python3-virtualenvwrapper
+sudo apt install vim
 cp ~/git/kurdshell/.zshrc $HOME
 cp ~/git/kurdshell/.zprofile $HOME
 source ~/.zshrc
