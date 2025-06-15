@@ -47,15 +47,52 @@ sudo apt install liquidctl
 #sudo cp ~/git/kurdshell/casectl ~/bin
 #sudo chmod 755 ~/bin/casectl
 
+#System Security
+sudo ufw enable
+sudo ufw allow ssh
+# sudo ufw allow 8000/tcp # allows port forwarding (if applicable)
+sudo apt install fail2ban -y
+sudo systemctl enable fail2ban
+sudo systemctl start fail2ban
+sudo apt install nginx -y
+sudo apt install certbot python3-certbot-nginx -y
+sudo certbot --nginx #reverse proxy and certbot
+
+#Misc Info for Running Python Port-forwarded apps
+# pip install gunicorn
+# gunicorn -k uvicorn.workers.UvicornWorker your_script_name:app --bind 127.0.0.1:8000
+
 #Japanese Keyboard
 sudo apt install fcitx-mozc ibus-mozc mozc-data mozc-server mozc-utils-gui
 # install if characters not appearing correctly 'sudo apt install fonts-takao'
 
 #Proton VPN
-sudo wget https://repo.protonvpn.com/debian/dists/stable/main/binary-all/protonvpn-stable-release_1.0.4_all.deb
-sudo dpkg -i ./protonvpn-stable-release_1.0.4_all.deb && sudo apt update
+sudo wget https://repo.protonvpn.com/debian/dists/stable/main/binary-all/protonvpn-stable-release_1.0.8_all.deb
+sudo dpkg -i ./protonvpn-stable-release_1.0.8_all.deb && sudo apt update
 sudo apt install proton-vpn-gnome-desktop
 sudo apt install libayatana-appindicator3-1 gir1.2-ayatanaappindicator3-0.1 gnome-shell-extension-appindicator
+
+#1passsword
+curl -sS https://downloads.1password.com/linux/keys/1password.asc | sudo gpg --dearmor --output /usr/share/keyrings/1password-archive-keyring.gpg
+echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/1password-archive-keyring.gpg] https://downloads.1password.com/linux/debian/amd64 stable main' | sudo tee /etc/apt/sources.list.d/1password.list
+sudo mkdir -p /etc/debsig/policies/AC2D62742012EA22/
+curl -sS https://downloads.1password.com/linux/debian/debsig/1password.pol | sudo tee /etc/debsig/policies/AC2D62742012EA22/1password.pol
+sudo mkdir -p /usr/share/debsig/keyrings/AC2D62742012EA22
+curl -sS https://downloads.1password.com/linux/keys/1password.asc | sudo gpg --dearmor --output /usr/share/debsig/keyrings/AC2D62742012EA22/debsig.gpg
+sudo apt update && sudo apt install 1password
+
+#op cli
+curl -sS https://downloads.1password.com/linux/keys/1password.asc | \
+  sudo gpg --dearmor --output /usr/share/keyrings/1password-archive-keyring.gpg && \
+  echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/1password-archive-keyring.gpg] https://downloads.1password.com/linux/debian/$(dpkg --print-architecture) stable main" | \
+  sudo tee /etc/apt/sources.list.d/1password.list && \
+  sudo mkdir -p /etc/debsig/policies/AC2D62742012EA22/ && \
+  curl -sS https://downloads.1password.com/linux/debian/debsig/1password.pol | \
+  sudo tee /etc/debsig/policies/AC2D62742012EA22/1password.pol && \
+  sudo mkdir -p /usr/share/debsig/keyrings/AC2D62742012EA22 && \
+  curl -sS https://downloads.1password.com/linux/keys/1password.asc | \
+  sudo gpg --dearmor --output /usr/share/debsig/keyrings/AC2D62742012EA22/debsig.gpg && \
+  sudo apt update && sudo apt install 1password-cli
 
 #Install Apps
 #Spotify
@@ -77,14 +114,13 @@ sudo snap install telegram-desktop
 
 
 # Reboot when completed
-echo "All processes completed, please run 'sudo reboot'"
+echo "All processes completed, please run 'reboot'"
 
 #MANUAL STEPS
 # setup display and monitors
 # rename system to Saladin
 # set user password
-# Install official 1password client
-    # Also add in op cli
+# login to 1password
 # login and configure proton vpn
 # Firefox
     # Login
