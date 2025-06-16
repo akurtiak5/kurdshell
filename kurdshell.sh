@@ -66,6 +66,20 @@ sudo certbot --nginx #reverse proxy and certbot
 sudo apt install fcitx-mozc ibus-mozc mozc-data mozc-server mozc-utils-gui
 # install if characters not appearing correctly 'sudo apt install fonts-takao'
 
+#Firefox
+sudo add-apt-repository ppa:mozillateam/ppa
+echo '
+Package: firefox*
+Pin: release o=LP-PPA-mozillateam
+Pin-Priority: 501
+
+Package: firefox*
+Pin: release o=Ubuntu
+Pin-Priority: -1
+' | sudo tee /etc/apt/preferences.d/mozilla-firefox
+sudo snap remove firefox
+sudo apt install --verbose-versions firefox
+
 #Proton VPN
 sudo wget https://repo.protonvpn.com/debian/dists/stable/main/binary-all/protonvpn-stable-release_1.0.8_all.deb
 sudo dpkg -i ./protonvpn-stable-release_1.0.8_all.deb && sudo apt update
